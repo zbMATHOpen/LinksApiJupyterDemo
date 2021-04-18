@@ -1,7 +1,9 @@
 version: "3"
 services:
   jupyter:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile_hidden_from_binder
     container_name: jupyter
     ports:
     - 8888:8888
